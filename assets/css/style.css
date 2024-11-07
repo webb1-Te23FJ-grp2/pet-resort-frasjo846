@@ -1,0 +1,22 @@
+img{
+    display: block;
+}
+
+div{
+    border: 2px yellow groove;
+}
+.top{
+    display: flex;
+    justify-content: space-between;
+}
+.top_child{
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+.img_big{
+    background-image: url(img/happiest-dog.webp);
+}
+.white{
+    color: white;
+}
