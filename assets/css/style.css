@@ -15,8 +15,33 @@ div{
     gap: 20px;
 }
 .img_big{
+    /* background-color: beige; */
     background-image: url(img/happiest-dog.webp);
+    height: 600px;
 }
-.white{
+.white_text{
     color: white;
+}
+.big_container{
+    max-width: 1200px;
+    background-color: #eee;
+}
+.down_left{
+    display: flex;
+    align-items: flex-end;
+}
+.container{
+    padding: 0 10px;
+    background-color: white;
+}
+.padding{
+    border-radius: 20px;
+}
+.grooming{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.grooming img{
+    height: 300px;
 }
