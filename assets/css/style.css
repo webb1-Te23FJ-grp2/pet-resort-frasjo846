@@ -1,47 +1,88 @@
-img{
-    display: block;
+img {
+  display: block;
+}
+body {
+  background-color: eee;
 }
 
-div{
-    border: 2px yellow groove;
+div {
+  border: 2px yellow groove;
 }
-.top{
-    display: flex;
-    justify-content: space-between;
+.big_container {
+  margin: auto;
+  max-width: 1200px;
+  background-color: #eee;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "top top top top"
+    "big_img big_img big_img big_img"
+    "grooming grooming grooming partners"
+    "column_1 column_2 column_3 partners";
 }
-.top_child{
-    display: flex;
-    justify-content: space-around;
-    gap: 20px;
+.top {
+  display: flex;
+  justify-content: space-between;
+  grid-area: top;
 }
-.img_big{
-    /* background-color: beige; */
-    background-image: url(img/happiest-dog.webp);
-    height: 600px;
+.top_child {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
 }
-.white_text{
-    color: white;
+.img_big {
+  /* background-color: beige; */
+  background-image: url(img/happiest-dog.webp);
+  height: 600px;
+  grid-area: big_img;
 }
-.big_container{
-    max-width: 1200px;
-    background-color: #eee;
+.white_text {
+  color: white;
 }
-.down_left{
-    display: flex;
-    align-items: flex-end;
+
+.down_left {
+  display: flex;
+  align-items: flex-end;
 }
-.container{
-    padding: 0 10px;
-    background-color: white;
+.container {
+  padding: 0 10px;
+  background-color: white;
 }
-.padding{
-    border-radius: 20px;
+.radius {
+  border-radius: 20px;
 }
-.grooming{
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+.grooming {
+  display: flex;
+  justify-content: space-evenly;
+  /* flex-wrap: wrap; */
+  grid-area: grooming;
 }
-.grooming img{
-    height: 300px;
+.grooming img {
+  height: 300px;
+}
+.partners {
+  display: flex;
+  grid-area: partners;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+}
+.partners_logo {
+  display: flex;
+  justify-content: center;
+  size: 50%;
+}
+.column1 {
+  grid-area: column_1;
+}
+.column2 {
+  grid-area: column_2;
+}
+.column3 {
+  grid-area: column_3;
+}
+.test {
+  background-color: yellow;
+}
+.center{
+    margin: auto;
 }
