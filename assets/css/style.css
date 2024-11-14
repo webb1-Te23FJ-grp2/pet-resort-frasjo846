@@ -2,13 +2,10 @@ img {
   display: block;
 }
 body {
-  background-color: eee;
+  background-color: #eee;
 }
 
-div {
-  border: 2px yellow groove;
-}
-.big_container {
+.wrapper {
   margin: auto;
   max-width: 1200px;
   background-color: #eee;
@@ -19,6 +16,7 @@ div {
     "big_img big_img big_img big_img"
     "grooming grooming grooming partners"
     "column_1 column_2 column_3 partners";
+    gap: 10px;
 }
 .top {
   display: flex;
@@ -30,46 +28,67 @@ div {
   justify-content: space-around;
   gap: 20px;
 }
+.img_text{
+  margin-left: 20px;
+  padding: 20px;
+}
+.menu{
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  gap: 50px;
+  margin-right: 40px;
+}
+.menu li{
+  list-style: none;
+  display: block;
+}
+.no_line{
+  text-decoration: none;
+  font-weight: 900;
+  color: black;
+}
 .img_big {
-  /* background-color: beige; */
   background-image: url(img/happiest-dog.webp);
   height: 600px;
   grid-area: big_img;
+  padding: 0px;
 }
 .white_text {
   color: white;
 }
-
 .down_left {
   display: flex;
   align-items: flex-end;
 }
 .container {
-  padding: 0 10px;
   background-color: white;
+}
+.padding{
+  padding: 20px;
 }
 .radius {
   border-radius: 20px;
 }
 .grooming {
   display: flex;
-  justify-content: space-evenly;
-  /* flex-wrap: wrap; */
+  justify-content: space-between;
   grid-area: grooming;
 }
 .grooming img {
   height: 300px;
 }
+.grooming_text{
+  padding: 20px;
+}
 .partners {
   display: flex;
   grid-area: partners;
   flex-direction: column;
-  /* flex-wrap: wrap; */
 }
 .partners_logo {
   display: flex;
   justify-content: center;
-  size: 50%;
 }
 .column1 {
   grid-area: column_1;
@@ -80,9 +99,12 @@ div {
 .column3 {
   grid-area: column_3;
 }
+
 .test {
   background-color: yellow;
 }
 .center{
-    margin: auto;
+    display: flex;
+    justify-content: center;
+    background-color: ;
 }
