@@ -25,7 +25,7 @@ body {
     "big_img big_img big_img big_img"
     "grooming grooming grooming partners"
     "column_1 column_2 column_3 partners";
-    gap: 10px;
+    gap: 20px;
 }
 .top {
   display: flex;
