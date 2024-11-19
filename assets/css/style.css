@@ -8,7 +8,7 @@ body {
 
 .wrapper {
   margin: auto;
-  max-width: 1200px;
+  width: 1200px;
   background-color: #eee;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -78,6 +78,7 @@ body {
 }
 .grooming img {
   height: 300px;
+  width: 650px;
 }
 .grooming_text{
   padding: 20px;
