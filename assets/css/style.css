@@ -4,6 +4,7 @@ img {
 }
 body {
   background-color: #eee;
+  align-content: center;
 }
 .gaegu-regular {
   font-family: "Gaegu", sans-serif;
@@ -25,11 +26,11 @@ body {
     "column_2" 
     "column_3"
     "partners";
- 
+    width: 50%;
 }
 #wrapper-block{
   margin: auto;
-  width: 1200px;
+ 
   background-color: #eee;
   display: grid;
   gap: 20px;
@@ -48,16 +49,24 @@ body {
   margin-left: 20px;
   padding: 20px;
 }
+.top_child>div>h2{
+  display: flex;
+  flex-wrap: nowrap;
+}
 .menu {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 10px;
-  gap: 50px;
-  margin-right: 40px;
+  gap: 5px;
+  flex-wrap: wrap;
 }
 .menu li {
   list-style: none;
   display: block;
+  background-color: #f5f5dc;
+  border-radius: 4px;
+  box-shadow: 1px 2px 1px #bcbca0;
 }
 .no_line {
   text-decoration: none;
@@ -87,8 +96,13 @@ body {
   border-radius: 20px;
 }
 .grooming {
+  flex-direction: column;
+  align-self: center;
+  margin: auto;
+  text-align: center;
+}
+#grooming_default{
   display: flex;
-  flex-direction: row;
   grid-area: grooming;
 }
 .grooming img {
@@ -105,6 +119,7 @@ body {
 #partner-box{
   display: flex;
   grid-area: partners;
+  justify-content: space-between;
 }
 .partners_logo {
   display: flex;
@@ -134,17 +149,28 @@ body {
   margin: auto;
   text-align: center;
 }
-@media screen and (min-width: 1000px) {
+.margin{
+  align-items: center;
+  margin: auto;
+}
+@media screen and (min-width: 700px) {
   .wrapper {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
-      "top top top top"
-      "big_img big_img big_img big_img"
-      "grooming grooming grooming partners"
-      "column_1 column_2 column_3 partners";
+      "top top top"
+      "big_img big_img big_img"
+      "grooming grooming grooming"
+      "column_1 column_2 column_3" 
+      "partners partners partners";
+    width: 700px;
   }
-  .partners {
-    flex-direction: column;
+  .menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+    gap: 50px;
+    margin-right: 40px;
   }
   .grooming {
     display: flex;
@@ -153,5 +179,21 @@ body {
   }
   .center{
     margin: 0;
+  }
+  .grooming{
+    flex-direction: row;
+   
+  }
+}
+
+@media screen and (min-width: 1230px) {
+  .wrapper {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "top top top top"
+      "big_img big_img big_img big_img"
+      "grooming grooming grooming partners"
+      "column_1 column_2 column_3 partners";
+    width: 1200px;
   }
 }
